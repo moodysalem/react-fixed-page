@@ -1,6 +1,6 @@
 {
   "name": "react-fixed-page",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Declaratively fix the underlying scrolling element of a page for use in overlay elements",
   "main": "dist/index.js",
   "repository": "https://github.com/moodysalem/react-fixed-page.git",
