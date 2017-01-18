@@ -1,6 +1,4 @@
 # [![npm](https://img.shields.io/npm/v/react-fixed-page.svg?maxAge=86400)](https://www.npmjs.com/package/react-fixed-page) [![Build Status](https://travis-ci.org/moodysalem/react-fixed-page.svg)](https://travis-ci.org/moodysalem/react-fixed-page) react-fixed-page
-
-# react-fixed-page
 Declaratively fix the underlying scrolling element of a page for use in overlay elements
 
 # Install
