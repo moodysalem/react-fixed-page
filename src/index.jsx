@@ -1,5 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import withSideEffect from 'react-side-effect';
+import PropTypes from 'prop-types';
 
 class FixedPage extends Component {
   static propTypes = {
