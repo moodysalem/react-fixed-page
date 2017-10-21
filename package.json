@@ -20,6 +20,7 @@
     "webpack": "^1.12.14"
   },
   "peerDependencies": {
-    "react": "^15.3.0"
+    "react": ">=15.3.0",
+    "prop-types": ">=15.5.8"
   }
 }

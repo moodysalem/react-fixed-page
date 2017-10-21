@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"));
+		module.exports = factory(require("react"), require("prop-types"));
 	else if(typeof define === 'function' && define.amd)
-		define(["react"], factory);
+		define(["react", "prop-types"], factory);
 	else if(typeof exports === 'object')
-		exports["ReactFixedPage"] = factory(require("react"));
+		exports["ReactFixedPage"] = factory(require("react"), require("prop-types"));
 	else
-		root["ReactFixedPage"] = factory(root["React"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_1__) {
+		root["ReactFixedPage"] = factory(root["React"], root["prop-types"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_9__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -72,6 +72,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _reactSideEffect2 = _interopRequireDefault(_reactSideEffect);
 
+	var _propTypes = __webpack_require__(9);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -103,7 +107,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  return FixedPage;
 	}(_react.Component), _class.propTypes = {
-	  fixed: _react.PropTypes.bool.isRequired
+	  fixed: _propTypes2.default.bool.isRequired
 	}, _temp);
 
 
@@ -1191,6 +1195,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = isArray;
 
+
+/***/ },
+/* 9 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_9__;
 
 /***/ }
 /******/ ])
