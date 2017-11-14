@@ -1,5 +1,5 @@
 {
-  "name": "react-fixed-page",
+  "name": "react-fixed-page-ms",
   "version": "1.0.2",
   "description": "Declaratively fix the underlying scrolling element of a page for use in overlay elements",
   "main": "dist/index.js",
