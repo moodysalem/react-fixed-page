@@ -1,11 +1,8 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import withSideEffect from 'react-side-effect';
 
 class FixedPage extends Component {
-  static propTypes = {
-    fixed: PropTypes.bool.isRequired
-  };
-
   shouldComponentUpdate() {
     return false;
   }
@@ -15,7 +12,11 @@ class FixedPage extends Component {
   }
 }
 
-const any = (list, iterator) => {
+FixedPage.propTypes = {
+  fixed: PropTypes.bool.isRequired
+};
+
+function any(list, iterator) {
   for (let i = 0; i < list.length; i++) {
     if (iterator(list[ i ])) {
       return true;
@@ -23,15 +24,15 @@ const any = (list, iterator) => {
   }
 
   return false;
-};
+}
 
-const reducePropsToState = propsList => {
+function reducePropsToState(propsList) {
   return any(propsList, ({ fixed }) => fixed);
-};
+}
 
 let scrollTop = null, lastFixed = false;
 
-const handleStateChangeOnClient = fixed => {
+function handleStateChangeOnClient(fixed) {
   if (fixed === lastFixed) {
     return;
   }
@@ -58,7 +59,7 @@ const handleStateChangeOnClient = fixed => {
     scrollingElement.scrollTop = scrollTop;
     scrollTop = null;
   }
-};
+}
 
 export default withSideEffect(
   reducePropsToState,

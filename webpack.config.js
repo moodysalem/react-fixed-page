@@ -1,38 +1,33 @@
-const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
-  entry: "./src/index.jsx",
+  entry: './src/index.jsx',
 
   module: {
     loaders: [
-      // interpret ES6/JSX
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel',
-        query: {
-          cacheDirectory: true,
-          plugins: [ 'transform-decorators-legacy' ],
-          presets: [ 'es2015', 'stage-1', 'react' ]
-        }
+        loader: 'babel-loader',
       }
     ]
   },
 
   output: {
-    path: "./dist",
-    filename: "index.js",
-    library: "ReactFixedPage",
-    libraryTarget: "umd"
+    path: path.resolve('./dist'),
+    filename: 'index.js',
+    library: 'ReactFixedPage',
+    libraryTarget: 'umd'
   },
 
   resolve: {
-    extensions: [ '', '.js', '.jsx' ]
+    extensions: [ '.js', '.jsx' ]
   },
 
   externals: [
     {
-      'react': { commonjs: 'react', commonjs2: 'react', amd: 'react', root: 'React' }
+      'react': { commonjs: 'react', commonjs2: 'react', amd: 'react', root: 'React' },
+      'prop-types': 'prop-types'
     }
   ]
 };
